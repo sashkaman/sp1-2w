@@ -11,10 +11,12 @@ export const TodolistItem = ({ title, tasks, deleteTask }: Props) => {
   return (
     <div>
       <h3>{title}</h3>
+
       <div>
         <input />
         <Button title={'+'} />
       </div>
+
       {tasks.length === 0 ? (
         <p>Тасок нет</p>
       ) : (
@@ -30,6 +32,7 @@ export const TodolistItem = ({ title, tasks, deleteTask }: Props) => {
           })}
         </ul>
       )}
+
       <div>
         <Button title={'All'} />
         <Button title={'Active'} />
