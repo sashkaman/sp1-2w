@@ -5,6 +5,7 @@ type Props = {
   title: string
   tasks: Task[]
   deleteTask: (taskId: number) => void
+  // changeFilter: (filtet: FilterValues) => void
 }
 
 export const TodolistItem = ({ title, tasks, deleteTask }: Props) => {
@@ -44,9 +45,14 @@ export const TodolistItem = ({ title, tasks, deleteTask }: Props) => {
       </div> */}
 
       <div>
-        <Button title={'All'} onClick={() => { }} />
-        <Button title={'Active'} onClick={() => { }} />
-        <Button title={'Completed'} onClick={() => { }} />
+        {/* <Button title={'All'} onClick={() => changeFilter('all')} />
+        <Button title={'Active'} onClick={() => changeFilter('active')} />
+        <Button title={'Completed'} onClick={() => changeFilter('completed')} /> */}
+        <div>
+          <Button title={'All'} onClick={() => { }} />
+          <Button title={'Active'} onClick={() => { }} />
+          <Button title={'Completed'} onClick={() => { }} />
+        </div>
       </div>
     </div>
   )
