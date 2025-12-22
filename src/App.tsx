@@ -9,6 +9,9 @@ export type Task = {
 }
 
 export const App = () => {
+
+  const [filter, setFilter] = useState('all')
+
   const [tasks, setTasks] = useState<Task[]>([
     { id: 1, title: 'HTML&CSS', isDone: true },
     { id: 2, title: 'JS', isDone: true },
@@ -25,10 +28,18 @@ export const App = () => {
     setTasks(filteredTasks)
   }
 
+  let filteredTasks = tasks
+  if (filter === 'active') {
+    filteredTasks = tasks.filter(task => task.isDone === false)
+  }
+  if (filter === 'completed') {
+    filteredTasks = tasks.filter(task => task.isDone === true)
+  }
+
   return (
     <div className="app">
       <TodolistItem title="What to learn"
-        tasks={tasks}
+        tasks={filteredTasks}
         deleteTask={deleteTask} />
     </div>
   )
