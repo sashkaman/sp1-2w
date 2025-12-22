@@ -11,7 +11,6 @@ export type Task = {
 export type FilterValues = 'all' | 'active' | 'completed'
 
 // export const App = () => {
-//   // debugger
 //   const [filter, setFilter] = useState<FilterValues>('all')
 
 //   let [tasks, setTasks] = useState<Task[]>([
